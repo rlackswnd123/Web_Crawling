@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="DBAccess">
+	<update id="mergeData" parameterType="java.util.HashMap">
+		/* mergeData : 지자체 지원사업 정보 머지 */
+		MERGE T_LOCAL_SUPPROJ_INFO AS A 
+		USING (SELECT #{readKey } AS READ_KEY)  AS B
+		   ON (A.READ_KEY = B.READ_KEY AND A.DELYN = 'N')
+		 WHEN MATCHED THEN
+	   UPDATE SET
+			  SIDO = #{SIDO }
+			, SUBJECT = #{SUBJECT }
+			, CONTENT = #{CONTENT }
+			, PROJ_GUBUN = #{PROJ_GUBUN }
+			, PROJ_NAME = #{PROJ_NAME }
+			, PROJ_STEP = #{PROJ_STEP }
+			, PROJ_PERIOD = #{PROJ_PERIOD }
+			, PROJ_TARGET = #{PROJ_TARGET }
+			, PROJ_SUMMARY = #{PROJ_SUMMARY }
+			, SUPPORT_MONEY = #{SUPPORT_MONEY }
+			, PART_NUM = #{PART_NUM }
+			, REG_POST_NAME = #{REG_POST_NAME }
+			, REG_POST_DATE = #{REG_POST_DATE }
+			, GUBUN = #{GUBUN }
+			, RECEIPT_PERIOD = #{RECEIPT_PERIOD }
+			, RECEIPT_METHOD = #{RECEIPT_METHOD }
+			, RESULT_DATE = #{RESULT_DATE }
+			, ORGANIZATION = #{ORGANIZATION }
+			, PROJ_DEPT = #{PROJ_DEPT }
+			, PROJ_CHARGE = #{PROJ_CHARGE }
+			, PROJ_CONTACT = #{PROJ_CONTACT }
+			, INFO_ATTACH_FILE = #{INFO_ATTACH_FILE }
+			, INFO_ATTACH_FILE_URL = #{INFO_ATTACH_FILE_URL }
+			, UPDDT = GETDATE()
+			, UPDMEMID = 'SYSTEM'
+		 WHEN NOT MATCHED THEN
+	   INSERT (
+			  READ_KEY, READ_URL, SIDO, SUBJECT
+			, CONTENT, PROJ_GUBUN, PROJ_NAME, PROJ_STEP, PROJ_PERIOD
+			, PROJ_TARGET, PROJ_SUMMARY, SUPPORT_MONEY, PART_NUM, REG_POST_NAME
+			, REG_POST_DATE, GUBUN, RECEIPT_PERIOD, RECEIPT_METHOD
+			, RESULT_DATE, ORGANIZATION, PROJ_DEPT, PROJ_CHARGE, PROJ_CONTACT
+			, INFO_ATTACH_FILE, INFO_ATTACH_FILE_URL, DELYN, REGDT, REGMEMID
+			  )
+	   VALUES (
+			  #{readKey }, #{detailUrl }, #{SIDO }, #{SUBJECT }
+			, #{CONTENT }, #{PROJ_GUBUN }, #{PROJ_NAME }, #{PROJ_STEP }, #{PROJ_PERIOD }
+			, #{PROJ_TARGET }, #{PROJ_SUMMARY }, #{SUPPORT_MONEY }, #{PART_NUM }, #{REG_POST_NAME }
+			, #{REG_POST_DATE }, #{GUBUN }, #{RECEIPT_PERIOD }, #{RECEIPT_METHOD }
+			, #{RESULT_DATE }, #{ORGANIZATION }, #{PROJ_DEPT }, #{PROJ_CHARGE }, #{PROJ_CONTACT }
+			, #{INFO_ATTACH_FILE }, #{INFO_ATTACH_FILE_URL }, 'N', getdate(), 'SYSTEM'
+			  );
+	</update>
+	
+	<insert id="mergeBoard" parameterType="java.util.HashMap">
+		/* mergeBoard : 지자체 지원사업 게시판 머지 */
+		MERGE T_BOARD AS A 
+		USING (SELECT LS_IDX FROM T_LOCAL_SUPPROJ_INFO WHERE READ_URL = #{detailUrl})  AS B
+		   ON (A.LS_IDX = B.LS_IDX AND A.DELYN = 'N' AND BC_ID = '503')
+		 WHEN MATCHED THEN
+	   UPDATE SET
+			  B_PIDX = B_IDX
+			, B_TITLE = #{SUBJECT}
+			, B_CONTENTS = #{CONTENT}
+			, UPDDT = GETDATE()
+			, UPDMEMID = 'SYSTEM'
+		 WHEN NOT MATCHED THEN
+	   INSERT (
+			  BC_ID, B_LEVEL, B_ORDER, B_NAME
+			, B_TITLE, B_CONTENTS, B_SECRETYN, B_NOTICEYN, B_DISPLAYYN
+			, REGDT, REGMEMID, DELYN, LS_IDX, B_ACCEPTYN
+		)VALUES (
+			  '503', '0', '0', #{REG_POST_NAME}
+			, #{SUBJECT}, #{CONTENT}, 'N', 'N', 'Y'
+			, GETDATE(), 'SYSTEM', 'N', (SELECT LS_IDX FROM T_LOCAL_SUPPROJ_INFO WHERE READ_URL = #{detailUrl}), 'N'
+		);
+	</insert>
+	
+	<update id="pidBoard" parameterType="java.util.HashMap">
+		/* pidBoard : 지자체 지원사업 게시판 pid 업데이트 */
+		UPDATE T_BOARD
+		   SET B_PIDX = B_IDX
+		 WHERE BC_ID = '503'
+	</update>
+</mapper>

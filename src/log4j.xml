@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+
+<!--
+/**
+ * Layout의 종류
+ * 	1. DateLayout,
+ * 	2. HTMLLayout,
+ * 	3. PatternLayout, ( 일반적으로 PatternLayout을 사용하는 것이 디버깅에 가장 적합함 )
+ * 	4. SimpleLayout,
+ * 	5. XMLLayout
+ *
+ * 패턴 Layout 설명
+ * 	p : debug, info, warn, error, fatal 등의 priority 가 출력된다.
+ * 	d : 로그 시간을 출력한다. 포맷은 %d{HH:mm:ss, SSS}, %d{yyyy MMM dd HH:mm:ss, SSS}같은 형태로 사용하며 SimpleDateFormat에 따른 포맷팅을 하면 된다.
+ * 	t : 로그이벤트가 발생된 쓰레드의 이름을 출력합니다.
+ * 	c : 카테고리를 표시합니다.
+ * 	n : 줄 바꿈
+ * 	m : 로그로 전달된 메시지를 출력한다.
+ *
+ * 출력포맷 예시
+ * [%p] %d{dd MMM hh:mm:ss.SSS aa} %t [%c]%n%m -> [INFO] 06 12월 12:55:08.822 오전 DefaultQuartzScheduler_Worker-6 [localSupProJ.procJsoup.parsingJsoup]
+*/ -->
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- 콘솔 로그 -->
+	<appender name="default" class="org.apache.log4j.ConsoleAppender">
+		<param name="target" value="System.out"/>
+		<layout class="org.apache.log4j.PatternLayout"> <!-- 패턴 레이아웃 설정 -->
+			<param name="ConversionPattern" value="%n%m"/>
+		</layout>
+	</appender>
+
+	<!-- 날짜별 로그 -->
+	<appender name="dailyRollingFile" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="C:/Users/김찬중/eclipse202009-workspace/LocalSupProJ/logs/localSupProJ.log" /> <!-- 파일명.확장자.DatePattern으로 정의 -->
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%n[%p] %d{dd MMM hh:mm:ss.SSS aa} %t [%c]%n%m"/>
+		</layout>
+	</appender>
+
+	<logger name="org.quartz">
+		<level value="info" />
+	</logger>
+
+	<!-- root 로거 기본 설정 -->
+	<root>
+		<level value="info" />
+		<appender-ref ref="default" />
+		<appender-ref ref="dailyRollingFile" />
+	</root>
+</log4j:configuration>

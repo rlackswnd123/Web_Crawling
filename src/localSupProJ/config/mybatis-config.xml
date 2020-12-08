@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- common.properties 파일 setting -->
+<!-- xml에 직접적으로 셋팅하지 않고 ${}로 변수처럼 정의한다. -->
+<!-- 실질적인 값은 다른 properties파일이나 소스상에 구현 할 수 있으니 더 유연한 셋팅을 가능케 한다. -->
+	
+<configuration>
+	<properties resource="localSupProJ/config/common.properties">
+		<property name="driver" value="${driver}"/>
+		<property name="url" value="${url}"/>
+		<property name="username" value="${username}"/>
+		<property name="password" value="${password}"/>
+	</properties>
+	
+	<!-- JDBC 연결 -->
+	<environments default="development">
+		<environment id="development">    					<!-- environment엘리먼트는 트랜잭션 관리와 커넥션 풀링을 위한 환경적인 설정을 나타낸다. -->
+		
+		<transactionManager type="JDBC"/> 					<!-- 트랜잭션을 제어하기 위한 TransactionManager -->
+										  					<!-- JDBC : 커밋, 롤백의 기능을 직접 사용 가능하게 하는 옵션, MANAGED : 트랜잭션에 대해 어떠한 직접적인 영향도 헁사하지 않는 것-->
+										  					<!-- Mybatis를 어우르고 있는 더 큰 개념의 컨테이너 혹은 개발 프레임워크(스프링)는 자체적으로 트랜잭션 관리를 할 수 있으므로, 굳이 Mybatis에서 설정하지 않아도 되는 경우에 managed옵션 사용 -->
+		
+		<dataSource type="POOLED">        					<!-- 데이터베이스 Connection인스턴스를 가져오기 위한 DataSource -->
+										  					<!-- UNPOOLED, POOLED, JNDI -->
+										  					<!-- UNPOOL : DB꽌련 요청이 올떄마다 실시간으로 커넥션 객체를 OPEN하고 CLOSE한다 -->
+										  					<!-- POOLED : 너무나도 인기있는 Web Application의 방법으로, 커넥션 객체를 미리 만들어 놓고 관리하기 때문에 객체를 만드는 시간을 줄이는데 목적이 있다. -->
+			<property name="driver" value="${driver}"/>
+			<property name="url" value="${url}"/>
+			<property name="username" value="${username}"/>
+			<property name="password" value="${password}"/>
+		</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers> 												<!-- mappers엘리먼트는 SQL 코드와 매핑 정의를 가지는 XML 파일인 mapper의 목록을 지정한다. -->
+		<mapper resource="localSupProJ/sqlMap/DBAccess.xml"/>
+	</mappers>
+</configuration>

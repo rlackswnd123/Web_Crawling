@@ -1,0 +1,155 @@
+
+웹 크롤링 스케줄러 시작
+[INFO] 08 12월 11:36:34.427 오후 main [org.quartz.impl.StdSchedulerFactory]
+Using default implementation for ThreadExecutor
+[INFO] 08 12월 11:36:34.435 오후 main [org.quartz.simpl.SimpleThreadPool]
+Job execution threads will use class loader of thread: main
+[INFO] 08 12월 11:36:34.468 오후 main [org.quartz.core.SchedulerSignalerImpl]
+Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[INFO] 08 12월 11:36:34.468 오후 main [org.quartz.core.QuartzScheduler]
+Quartz Scheduler v.2.2.3 created.
+[INFO] 08 12월 11:36:34.470 오후 main [org.quartz.simpl.RAMJobStore]
+RAMJobStore initialized.
+[INFO] 08 12월 11:36:34.471 오후 main [org.quartz.core.QuartzScheduler]
+Scheduler meta-data: Quartz Scheduler (v2.2.3) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+[INFO] 08 12월 11:36:34.472 오후 main [org.quartz.impl.StdSchedulerFactory]
+Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+[INFO] 08 12월 11:36:34.472 오후 main [org.quartz.impl.StdSchedulerFactory]
+Quartz scheduler version: 2.2.3
+[INFO] 08 12월 11:36:34.496 오후 main [org.quartz.core.QuartzScheduler]
+Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+[INFO] 08 12월 11:37:00.062 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.Quartz.quartzJob]
+웹 크롤링 시작시각 : Tue Dec 08 23:37:00 KST 2020
+[INFO] 08 12월 11:37:00.634 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+>> 서울시 마을공동체 종합지원센터-> 지원사업 -> 신청 및 접수 -> 전체사업
+[INFO] 08 12월 11:37:00.641 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+0번 사이트 목록: 일상의 참여와 지역의제 해결을 위한 로컬랩 동네발전소 (3년차) 공모사업 공고 : http://www.seoulmaeul.org/programs/user/support/read.asp?sigungu=&idx=737&tabgbn=4
+[INFO] 08 12월 11:37:01.875 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+0번 사이트 목록: ★수정제안서 제출 /2020 종로구 마을공동체 3차 공모사업 「성곽마을 지원사업」 : http://www.seoulmaeul.org/programs/user/support/read.asp?sigungu=&idx=736&tabgbn=4
+[INFO] 08 12월 11:37:03.241 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+0번 사이트 목록: 2020년 종로구 마을공동체 3차 공모사업 「성곽마을 지원사업」 : http://www.seoulmaeul.org/programs/user/support/read.asp?sigungu=&idx=735&tabgbn=4
+[INFO] 08 12월 11:37:04.334 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+0번 사이트 목록: 「2020년 광진구 골목환경개선공동체」 지원사업 공고 : http://www.seoulmaeul.org/programs/user/support/read.asp?sigungu=&idx=734&tabgbn=4
+[INFO] 08 12월 11:37:05.411 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+0번 사이트 목록: 「2020년 강동구 따뜻한 골목만들기」 지원사업(연장공고) : http://www.seoulmaeul.org/programs/user/support/read.asp?sigungu=&idx=733&tabgbn=4
+[INFO] 08 12월 11:37:07.109 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+>> 서울시 공동주택통합정보마당 알림마당 > 지원소식 게시판
+[INFO] 08 12월 11:37:07.111 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+1번 사이트 목록: 2020년 강동구 공동주택 지원사업 : https://openapt.seoul.go.kr/boardForm/boardDetail.do?returnUrl=/portal/dMenu/supportNews/supportDetail.open&query=poSupportNews.poSupportNewsDetail&supportInfoSn=100507
+[INFO] 08 12월 11:37:08.260 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+1번 사이트 목록: 2020년 강동구 아파트 커뮤니티 공모사업(의무단지) : https://openapt.seoul.go.kr/boardForm/boardDetail.do?returnUrl=/portal/dMenu/supportNews/supportDetail.open&query=poSupportNews.poSupportNewsDetail&supportInfoSn=100508
+[INFO] 08 12월 11:37:09.438 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+1번 사이트 목록: 「2020년 공동주택 ‘같이살림’ 프로젝트」 모집 공고 : https://openapt.seoul.go.kr/boardForm/boardDetail.do?returnUrl=/portal/dMenu/supportNews/supportDetail.open&query=poSupportNews.poSupportNewsDetail&supportInfoSn=100509
+[INFO] 08 12월 11:37:10.592 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+1번 사이트 목록: 2020년 강동구 아파트 커뮤니티 공모사업(의무단지) : https://openapt.seoul.go.kr/boardForm/boardDetail.do?returnUrl=/portal/dMenu/supportNews/supportDetail.open&query=poSupportNews.poSupportNewsDetail&supportInfoSn=100508
+[INFO] 08 12월 11:37:11.761 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+1번 사이트 목록: 2020년 강동구 공동주택 지원사업 : https://openapt.seoul.go.kr/boardForm/boardDetail.do?returnUrl=/portal/dMenu/supportNews/supportDetail.open&query=poSupportNews.poSupportNewsDetail&supportInfoSn=100507
+[INFO] 08 12월 11:37:12.897 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+1번 사이트 목록: 친환경 콘덴싱보일러로 교체 시 보조금 20만원 지원 : https://openapt.seoul.go.kr/boardForm/boardDetail.do?returnUrl=/portal/dMenu/supportNews/supportDetail.open&query=poSupportNews.poSupportNewsDetail&supportInfoSn=100505
+[INFO] 08 12월 11:37:14.315 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+>> 대전광역시 공동체공모사업 신청 및 접수 게시판
+[INFO] 08 12월 11:37:14.321 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+2번 사이트 목록: 2021년 대전광역시 골목형 공동체… : https://www.daejeonmaeul.kr/app/contest/view?md_id=business_contest&code=204&page=1
+[INFO] 08 12월 11:37:15.424 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+2번 사이트 목록: 15년 공유네트워크 공유서가 공모사업 : https://www.daejeonmaeul.kr/app/contest/view?md_id=business_contest&code=195&page=1
+[INFO] 08 12월 11:37:16.554 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+2번 사이트 목록: 15년 공유네트워크 공모사업 : https://www.daejeonmaeul.kr/app/contest/view?md_id=business_contest&code=194&page=1
+[INFO] 08 12월 11:37:17.670 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+2번 사이트 목록: 2020년 동구 마을공동체 활성화 공모사업… : https://www.daejeonmaeul.kr/app/contest/view?md_id=business_contest&code=193&page=1
+[INFO] 08 12월 11:37:18.797 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+2번 사이트 목록: 2020년 동구 마을공동체 활성화 공모사업… : https://www.daejeonmaeul.kr/app/contest/view?md_id=business_contest&code=192&page=1
+[INFO] 08 12월 11:37:19.924 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+2번 사이트 목록: 2020년 대덕구 마을축제 공모사업 : https://www.daejeonmaeul.kr/app/contest/view?md_id=business_contest&code=191&page=1
+[INFO] 08 12월 11:37:21.048 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+2번 사이트 목록: 2020년 대덕구 마을축제 공모사업… : https://www.daejeonmaeul.kr/app/contest/view?md_id=business_contest&code=190&page=1
+[INFO] 08 12월 11:37:22.166 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+2번 사이트 목록: 2020년 대덕구 마을축제 공모사업 : https://www.daejeonmaeul.kr/app/contest/view?md_id=business_contest&code=188&page=1
+[INFO] 08 12월 11:37:23.290 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+2번 사이트 목록: 2020년 유성매직 마을공동체 추가… : https://www.daejeonmaeul.kr/app/contest/view?md_id=business_contest&code=187&page=1
+[INFO] 08 12월 11:37:24.390 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+2번 사이트 목록: 2020년 유성매직 마을공동체 추가… : https://www.daejeonmaeul.kr/app/contest/view?md_id=business_contest&code=186&page=1
+[INFO] 08 12월 11:37:25.553 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+2번 사이트 목록: 2020년 유성매직 마을공동체 추가… : https://www.daejeonmaeul.kr/app/contest/view?md_id=business_contest&code=185&page=1
+[INFO] 08 12월 11:37:26.646 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+2번 사이트 목록: 2020년 동구 마을공동체 활성화공모사업… : https://www.daejeonmaeul.kr/app/contest/view?md_id=business_contest&code=184&page=1
+[INFO] 08 12월 11:37:29.819 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+>> 경기도마을공동체지원센터 공지사항 > 공모사업 게시판
+[INFO] 08 12월 11:37:29.822 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+3번 사이트 목록: 2020 마을종합지원사업 연차지원 선정 결과 공고 N : http://ggmaeul.or.kr:80/base/board/read?boardManagementNo=8&boardNo=3686&searchCategory=&page=1&searchType=&searchWord=&menuLevel=3&menuNo=1
+[INFO] 08 12월 11:37:32.613 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+3번 사이트 목록: 2020년 마을공동체 지역역량강화사업 협력단체 선정 결과 : http://ggmaeul.or.kr:80/base/board/read?boardManagementNo=8&boardNo=3446&searchCategory=&page=1&searchType=&searchWord=&menuLevel=3&menuNo=1
+[INFO] 08 12월 11:37:35.352 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+3번 사이트 목록: 2020년 서로배움지원사업 최종 선정 결과 공고 : http://ggmaeul.or.kr:80/base/board/read?boardManagementNo=8&boardNo=3437&searchCategory=&page=1&searchType=&searchWord=&menuLevel=3&menuNo=1
+[INFO] 08 12월 11:37:38.245 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+3번 사이트 목록: 2020년 청년기반조성사업 심사선정 결과공고 : http://ggmaeul.or.kr:80/base/board/read?boardManagementNo=8&boardNo=3436&searchCategory=&page=1&searchType=&searchWord=&menuLevel=3&menuNo=1
+[INFO] 08 12월 11:37:41.095 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+3번 사이트 목록: 2020년 마을공동체 지역역량강화사업 모집 공고 : http://ggmaeul.or.kr:80/base/board/read?boardManagementNo=8&boardNo=3435&searchCategory=&page=1&searchType=&searchWord=&menuLevel=3&menuNo=1
+[INFO] 08 12월 11:37:43.866 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+3번 사이트 목록: 2020 다문화 자조모임 지원사업 이주민 공동체 최종선정 공고 : http://ggmaeul.or.kr:80/base/board/read?boardManagementNo=8&boardNo=3434&searchCategory=&page=1&searchType=&searchWord=&menuLevel=3&menuNo=1
+[INFO] 08 12월 11:37:46.642 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+3번 사이트 목록: 2020 다문화 자조모임 지원사업 이주민 공동체 서류심사 선정 공고 : http://ggmaeul.or.kr:80/base/board/read?boardManagementNo=8&boardNo=3432&searchCategory=&page=1&searchType=&searchWord=&menuLevel=3&menuNo=1
+[INFO] 08 12월 11:37:49.421 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+3번 사이트 목록: 2020년 마을네트워크모임지원사업 2차모짐 심사결과 공고 : http://ggmaeul.or.kr:80/base/board/read?boardManagementNo=8&boardNo=3430&searchCategory=&page=1&searchType=&searchWord=&menuLevel=3&menuNo=1
+[INFO] 08 12월 11:37:52.280 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+3번 사이트 목록: 2020년 마을정책상상모임지원 2차 모집 심사결과 공고 : http://ggmaeul.or.kr:80/base/board/read?boardManagementNo=8&boardNo=3429&searchCategory=&page=1&searchType=&searchWord=&menuLevel=3&menuNo=1
+[INFO] 08 12월 11:37:55.066 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+3번 사이트 목록: 2020년 청년기반조성 사업 모집 공고 : http://ggmaeul.or.kr:80/base/board/read?boardManagementNo=8&boardNo=3427&searchCategory=&page=1&searchType=&searchWord=&menuLevel=3&menuNo=1
+[INFO] 08 12월 11:37:58.027 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+>> 강원도 마을공동체 종합지원센터 공지사항 > 지원사업 게시판
+[INFO] 08 12월 11:37:58.028 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+4번 사이트 목록: 코로나19 확산방지를 위한 2020년 강원도 마을공동체 지원사업 추진기간 변경 안내 : http://www.gwmaeul.org/bbs/post?brid=1&poid=228
+[INFO] 08 12월 11:37:59.220 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+4번 사이트 목록: [강원도 마을공동체 종합지원센터] 2020년 예비마을활동가 양성교육 추가 모집 공고 : http://www.gwmaeul.org/bbs/post?brid=1&poid=341
+[INFO] 08 12월 11:38:00.325 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+4번 사이트 목록: [강원도 마을공동체 종합지원센터] 2020년 강원도 마을자원조사 지원사업 선정 결과 : http://www.gwmaeul.org/bbs/post?brid=1&poid=281
+[INFO] 08 12월 11:38:01.453 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+4번 사이트 목록: [강원도 마을공동체 종합지원센터] 2020년 강원도 마을자원조사 지원사업 공고 : http://www.gwmaeul.org/bbs/post?brid=1&poid=260
+[INFO] 08 12월 11:38:02.553 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+4번 사이트 목록: [강원도] 2020년 강원도 마을공동체 지원사업 (추가공모) 선정결과 : http://www.gwmaeul.org/bbs/post?brid=1&poid=239
+[INFO] 08 12월 11:38:03.654 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+4번 사이트 목록: [강원도] 2020년 강원도 마을공동체 지원사업 추가공모 공고 : http://www.gwmaeul.org/bbs/post?brid=1&poid=181
+[INFO] 08 12월 11:38:04.748 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+4번 사이트 목록: [강원도] 2020년 강원도 마을공동체 지원사업 선정결과 : http://www.gwmaeul.org/bbs/post?brid=1&poid=171
+[INFO] 08 12월 11:38:05.844 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+4번 사이트 목록: [강원도] 2020년 강원도 마을공동체 지원사업 공고 (9.30까지 기간 연장) : http://www.gwmaeul.org/bbs/post?brid=1&poid=148
+[INFO] 08 12월 11:38:07.004 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+>> 강원도 마을공동체 종합지원센터 공지사항 > 공고 게시판
+[INFO] 08 12월 11:38:07.006 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+5번 사이트 목록: 코로나19 확산방지를 위한 2020년 강원도 마을공동체 지원사업 추진기간 변경 안내 : http://www.gwmaeul.org/bbs/post?brid=1&poid=228
+[INFO] 08 12월 11:38:08.105 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+5번 사이트 목록: [강원도 마을공동체 종합지원센터] 2020 강원도 마을공동체 한마당 공동체 모집 안내문 : http://www.gwmaeul.org/bbs/post?brid=1&poid=370
+[INFO] 08 12월 11:38:09.299 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+5번 사이트 목록: [강원도] 2021년 마을기업 전문교육 신청자 모집 공고 : http://www.gwmaeul.org/bbs/post?brid=1&poid=360
+[INFO] 08 12월 11:38:10.403 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+5번 사이트 목록: [강원도] 2021년 강원도 마을기업(신규,2차년도,3차년도)모집 공고 : http://www.gwmaeul.org/bbs/post?brid=1&poid=355
+[INFO] 08 12월 11:38:11.498 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+5번 사이트 목록: [강원도] 2020년도 하반기 강원도 예비사회적기업 지정계획 공고 : http://www.gwmaeul.org/bbs/post?brid=1&poid=351
+[INFO] 08 12월 11:38:12.591 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+5번 사이트 목록: [춘천시] 춘천시 도시재생 마을활동가 모집 추가 공고 : http://www.gwmaeul.org/bbs/post?brid=1&poid=350
+[INFO] 08 12월 11:38:13.681 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+5번 사이트 목록: [삼척시] 2020년 여성 취‧창업 동아리 모집 공고 : http://www.gwmaeul.org/bbs/post?brid=1&poid=349
+[INFO] 08 12월 11:38:14.864 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+5번 사이트 목록: [인제군] 북면 도시재생 뉴딜사업 주민협의체 모집 공고 : http://www.gwmaeul.org/bbs/post?brid=1&poid=331
+[INFO] 08 12월 11:38:15.953 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+5번 사이트 목록: [화천군] 2020 공공미술 프로젝트 "우리 동네 미술" 작가팀 공모 : http://www.gwmaeul.org/bbs/post?brid=1&poid=330
+[INFO] 08 12월 11:38:17.055 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+5번 사이트 목록: [영월군] 영월군 폐광지역 도시재생 공모사업 안내문 : http://www.gwmaeul.org/bbs/post?brid=1&poid=329
+[INFO] 08 12월 11:38:18.140 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+5번 사이트 목록: [양양군] 2020년 강원도 여성 취·창업동아리 지원사업 공고 : http://www.gwmaeul.org/bbs/post?brid=1&poid=302
+[INFO] 08 12월 11:38:19.238 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+5번 사이트 목록: [고성군] 문화뉴딜 공공미술 프로젝트 "우리 동네 미술" 작가팀 공모 : http://www.gwmaeul.org/bbs/post?brid=1&poid=301
+[INFO] 08 12월 11:38:20.329 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+5번 사이트 목록: [횡성군] 횡성다함께교육 운영 수탁자 공개모집 공고 : http://www.gwmaeul.org/bbs/post?brid=1&poid=300
+[INFO] 08 12월 11:38:21.735 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+>> 부산광역시 도시재생지원센터 사업안내 > 공모사업신청
+[INFO] 08 12월 11:38:21.736 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.procJsoup.parsingJsoup]
+6번 사이트 목록: 2020 공동체 활성화 통합지원사업 【맞춤형 컨설팅 지원사업】 : http://www.urcb.or.kr/web/cityUniversity/view.do?mId=52&cuIdx=4
+[INFO] 08 12월 11:38:23.203 오후 DefaultQuartzScheduler_Worker-1 [localSupProJ.Quartz.quartzJob]
+웹 크롤링 종료시각 : Tue Dec 08 23:38:23 KST 2020
