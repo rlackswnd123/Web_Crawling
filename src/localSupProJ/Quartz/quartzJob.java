@@ -28,6 +28,7 @@ public class quartzJob implements Job{
 
 	static Logger log = LoggerFactory.getLogger(quartzJob.class);
 
+	@Override
 	public void execute(JobExecutionContext context) throws JobExecutionException {
 
 		log.info("웹 크롤링 시작시각 : " + new Date());
