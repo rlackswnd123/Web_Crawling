@@ -18,7 +18,7 @@ import localSupProJ.Quartz.quartzJob;
  * log4j  : java 기반의 로깅 처리 라이브러리
  * Quartz : 표준 자바 프로그램으로 만들어진 작업을 지정된 일정에 따라 실행시키는데 사용하는 Java 패키지(Java용 작업 스케줄러)
  */
-// Source-tree test
+// Source-tree-test
 public class callLocalSupPro{
 
 	static Logger log = LoggerFactory.getLogger(callLocalSupPro.class);
