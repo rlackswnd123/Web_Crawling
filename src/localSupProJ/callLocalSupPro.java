@@ -49,6 +49,7 @@ public class callLocalSupPro{
 			scheduler.scheduleJob(job, trigger); //가져온 scheduler에 실행시킬 job을 trigger에 설정한 일정에 따라 실행하도록 추가
 
 			scheduler.start();
+
 		}catch(Exception e){
 			e.printStackTrace();
 		}
